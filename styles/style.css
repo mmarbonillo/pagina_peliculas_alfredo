@@ -1,0 +1,54 @@
+#todo {
+	width: 80%;
+	position: relative;
+	margin: 0 auto;
+	background-size: 100%;
+}
+
+div {
+    width: 100%;
+    border: 1px solid black;
+}
+
+#header {
+    height: 60px;
+}
+
+#header p {
+    font-size: 30px;
+    border: 1px solid red;
+    display: inline-flex;
+    margin-top: 11px;
+    margin-left: 3%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#menus {
+    height: 35px;
+}
+
+#menus>*{
+    float: right;
+    margin-top: 7px;
+    margin-left: 12px;
+}
+
+#menus>input {
+    float: left;
+}
+
+#menus p {
+    display: inline-flex;
+    margin-top: 15px;
+    margin-right: 12px;
+}
+
+#imagen {
+    height: 70%;
+    margin-top: 6px;
+    margin-right: 12px;
+}
