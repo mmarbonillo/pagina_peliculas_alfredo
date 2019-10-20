@@ -7,7 +7,7 @@
     <meta name="author" content="Maria Del Mar Fernandez Bonillo">
 
     <!------------------FONTS--------------------------->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Montserrat&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/style.css">
 

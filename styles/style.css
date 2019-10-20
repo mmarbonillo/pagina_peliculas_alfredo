@@ -1,5 +1,5 @@
 #todo {
-	width: 80%;
+	width: 85%;
 	position: relative;
 	margin: 0 auto;
 	background-size: 100%;
@@ -51,4 +51,24 @@ a {
     height: 70%;
     margin-top: 6px;
     margin-right: 12px;
+}
+
+#movies {
+    float: left;
+    border: 1px solid blue;
+}
+
+#movie {
+    float: left;
+    border: 1px solid red;
+    width: 250px;
+    position: relative;
+    top: 20px;
+    margin-left: 55px;
+    margin-bottom: 50px;
+}
+
+#movie>* {
+    font-family: 'Bree Serif', serif;
+    
 }
