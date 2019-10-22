@@ -20,19 +20,14 @@
         </div>
         <div id="menus">
             <?php
-                /*if(!$data["session"]):
-                    echo "<p>Login</p>";
+                if(!$_REQUEST["session"]):
+                    echo "<p><a href='index.php?opc=showFormLogin&controller=userController'>Login</a></p>";
                 else:
-                    echo "<p><a href=\"#\">Logout</a></p>
-                    <img id=\"imagen\" src=\"images/user.png<\" alt=\"usuario\" onclick=\"window.location.href='#'\"/>
+                    echo "<p><a href='index.php?opc=closeSession?controller=userController'>Logout</a></p>
+                    <img id='imagen' src='images/user.png' alt='usuario' onclick=\"window.location.href='#'\"/>
                     <p><a href=\"#\">Añadir Película</a></p>";
-                endif;*/
+                endif;
             ?>
-            <!--<p>Login</p>-->
-
-            <p><a href="#">Logout</a></p>
-            <img id="imagen" src="images/user.png" alt="usuario" onclick="window.location.href='#'"/>
-            <p><a href="#">Añadir Película</a></p>
 
             <input type="text" name="search" id="search" placeholder="Search...">
             <input type="button" name="search_button" id="search_button" value="Search" onclick="window.location.href='#'">

@@ -7,11 +7,18 @@ class Movie {
     private $db;
 
     public function __construct(){
-        $this->db = new DBConnector(DBInfo::getDbHost(), DBInfo::getDbUser(), DBInfo::getDbPassword(), DBInfo::getDbName());
+        //$this->db = new DBConnector(DBInfo::getDbHost(), DBInfo::getDbUser(), DBInfo::getDbPassword(), DBInfo::getDbName());
+        $this->db = new DBConnector("localhost", "root", "", "cine");
     }
 
     public function getAllMovies() {
         $sql = "SELECT * FROM movies";
+        $result = $this->db->select($sql);
+        return $result;
+    }
+
+    public function getOneMovie($idMovie) {
+        $sql = "SELECT * FROM movies WHERE id=".$idMovie;
         $result = $this->db->select($sql);
         return $result;
     }

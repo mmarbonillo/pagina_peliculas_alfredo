@@ -6,9 +6,11 @@ class Security {
         session_start();
     }
 
-    /*public function openSession() {
+    public function openSession($id, $type) {
         session_start();
-    }*/
+        $_SESSION["id"] = $id;
+        $_SESSION["type"] = $type;
+    }
 
     public function isSessionOpen() {
         if(isset($_SESSION["id"]) && isset($_SESSION["type"])):

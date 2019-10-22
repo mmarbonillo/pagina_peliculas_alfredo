@@ -1,22 +1,24 @@
 <?php
 //include ("config.php");
     include_once("./security.php");
-    include_once("./dbconnection.php");
+    include_once("./dbconnector.php");
     include_once("./dbInfo.php");
     class User {
+
         private $db;
+        private $security;
 
         public function __construct() {
-            //$this->db = new DBConnector("localhost", "root", "", "web");
+            $this->security = new Security();
             $this->db = new DBConnector(DBInfo::getDbHost(), DBInfo::getDbUser(), DBInfo::getDbPassword(), DBInfo::getDbName());
         }
 
         public function getForUsername($username, $pass) {
-            $sql = "SELECT * FROM users WHERE username = '$username' AND passwd = '$pass'";
+            $sql = "SELECT * FROM users WHERE nick = '$username' AND passwd = '$pass'";
             //$infor = array();
-            $infor = $this->db->select("SELECT * FROM users WHERE username = '$username' AND passwd = '$pass'");
+            $infor = $this->db->select($sql);
             if (count($infor) != 0) {
-                Security::openSession($infor[0]->id, $infor[0]->tipo);
+                $this->security->openSession($infor[0]->id, $infor[0]->type);
                 $userOk = true;
             } else {
                 $userOk = false;
