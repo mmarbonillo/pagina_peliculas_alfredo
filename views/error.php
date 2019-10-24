@@ -1,2 +1,3 @@
 <?php
-echo($data[0]->id);
+//echo($data["session"]);
+echo("Hola");

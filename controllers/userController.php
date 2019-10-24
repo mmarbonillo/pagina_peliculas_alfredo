@@ -1,5 +1,7 @@
 <?php
 include("./models/user.php");
+include_once("./security.php");
+include_once("movieController.php");
 
 class UserController {
 
@@ -23,17 +25,16 @@ class UserController {
         $passwd = $_REQUEST['passwd'];
         $userOk = $this->user->getForUsername($username, $passwd);
         if ($userOk) {
-            $data["session"] = 1;
             View::redirect("home", $data);
         } else {
-            $data["session"] = 0;
             $data["mensaje"] = "Nombre de usuario o contraseña incorrecto";
             View::redirect("home", $data);
         }
     }
 
     private function closeSession() {
-        $this->user->security->closeSession();
+        Security::closeSession();
+        View::redirect("home");
     }
 
 }

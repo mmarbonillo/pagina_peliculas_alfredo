@@ -2,6 +2,12 @@
 include("controllers/movieController.php");
 include("controllers/userController.php");
 
+if(isset($_REQUEST["opc"])):
+    $opc = $_REQUEST["opc"];
+else:
+    $opc = "home";
+endif;
+
 switch($_REQUEST["controller"]):
     case "movieController":
         $c = new MovieController();
@@ -13,7 +19,7 @@ switch($_REQUEST["controller"]):
         break;
     default:
         $c = new MovieController();
-        $c->main();
+        $c->main($opc);
         break;
 
 endswitch;

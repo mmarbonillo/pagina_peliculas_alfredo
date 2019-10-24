@@ -14,7 +14,7 @@
     <div id="todo">
         <div id="formularios">
             <div id="formulariologin">
-                <form action="index.php?opc=processLogin&controller=userController" method="POST">
+                <form action="index.php?controller=userController" method="POST">
                     <div class="opcion">
                         <div class="etiqueta">
                             <label for="username">Usuario: </label>

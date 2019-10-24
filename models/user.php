@@ -6,10 +6,10 @@
     class User {
 
         private $db;
-        private $security;
+        //private $security;
 
         public function __construct() {
-            $this->security = new Security();
+            //$this->security = new Security();
             $this->db = new DBConnector(DBInfo::getDbHost(), DBInfo::getDbUser(), DBInfo::getDbPassword(), DBInfo::getDbName());
         }
 
@@ -18,7 +18,7 @@
             //$infor = array();
             $infor = $this->db->select($sql);
             if (count($infor) != 0) {
-                $this->security->openSession($infor[0]->id, $infor[0]->type);
+                Security::openSession($infor[0]->id, $infor[0]->type);
                 $userOk = true;
             } else {
                 $userOk = false;

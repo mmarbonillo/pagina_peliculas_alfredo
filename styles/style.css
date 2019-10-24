@@ -117,14 +117,28 @@ a {
 }
 
 #movieInfo {
-    margin-left: 25%;
+    float: left;
+    margin-left: 1%;
     margin-top: 25px;
-    width: auto;
+    width: 40%;
+    border: 1px solid red;
 }
 
-.indentp {
-    text-indent: 15px;
+p.indentp {
+    padding-left: 15px;
     line-height: 0px;
+}
+
+input[class="indentp"]{
+    padding-left: 15px;
+    margin-top: -13px;
+    margin-bottom: -10px;
+}
+
+.tittle {
+    padding-left: 15px;
+    margin-top: -16px;
+    margin-bottom: -15px;
 }
 
 /*-----------------------EDIT MOVIE----------------------*/
@@ -132,9 +146,11 @@ a {
 .campoMovie{
     float: left;
     width: 24%;
+    border: 1px solid red;
 }
 
 .movieEditButton {
+    float: left;
     text-decoration: none;
     padding: 10px;
     font-weight: 400px;
@@ -142,7 +158,42 @@ a {
     color: #ffffff;
     background-color: #1883ba;
     border-radius: 6px;
+    margin-top: 15px;
     /*border: 2px solid #0016b0;*/
+}
+
+.movieDeleteButton {
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 80px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #fd5353;
+    border-radius: 6px;
+    /*border: 2px solid #0016b0;*/
+}
+
+#addActorDirector {
+    float: left;
+    border: 1px solid green;
+    width: 35%;
+    background-color: white;
+    font-size: 17px;
+}
+
+.unselectionable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.closeIcon {
+    width: 15px;
+    height: 15px;
+    float: right;
+    position: inherit;
 }
 
 /*-----------------FORM LOGIN--------------------*/

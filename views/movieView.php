@@ -5,7 +5,7 @@ $directors = $data["director"];
 echo "<div class='movie'>";
     echo "<img src='images/$movie->cover' alt='cover' height='350px' width='250px'>";
     if($_REQUEST["session"]):
-        echo "<input type='button' name='edit' class='editButton' value='EDIT' onclick=\"window.location.href='index.php?opc=editMovie&controller=movieController&id=".$peli->id."'\">";
+        echo "<input type='button' name='edit' class='editButton' value='EDIT' onclick=\"window.location.href='index.php?opc=openMovie&controller=movieController&id=".$peli->id."'\">";
         echo "<input type='button' name='delete' class='deleteButton' value='DELETE'>";
     endif;
 echo "</div>";

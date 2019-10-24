@@ -3,11 +3,11 @@
 $movies = $data["movies"];
 foreach($movies as $peli):
     echo "<div class='movie'>";
-    if($_REQUEST["session"]):
+    if($data["session"]):
         echo "<input type='button' name='edit' class='editButton' value='EDIT' onclick=\"window.location.href='index.php?opc=editMovie&controller=movieController&id=".$peli->id."'\">";
         echo "<input type='button' name='delete' class='deleteButton' value='DELETE'>";
     endif;
-    echo "<a href='index.php?opc=openMovie&id=".$peli->id."&controller=movieController'><img class='divmovie' src='images/".$peli->cover."' alt='cover' height='350px' width='250px'></a>";
+    echo "<a href='index.php?opc=openMovie&movie=".$peli->id."&controller=movieController'><img class='divmovie' src='images/".$peli->cover."' alt='cover' height='350px' width='250px'></a>";
 
     $i= 1;
     while($i <= $peli->rating):
